@@ -7,7 +7,16 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap'); 
         
-        #unique-link {
+        body {
+            position: relative; /* Define um contexto de posicionamento para elementos absolutos */
+            min-height: 100vh; /* Garante que o corpo ocupe toda a altura da janela */
+            margin: 0; /* Remove margens padrão */
+        }
+
+        #vertical-link {
+            position: absolute; /* Posiciona em relação ao contêiner pai */
+            bottom: 0; /* Encosta na base da página */
+            right: 0; /* Encosta na lateral direita */
             background-color: #55AD50; /* Cor padrão do botão */
             border: none; 
             height: 42px; 
@@ -22,38 +31,41 @@
             outline: none; /* Remove a borda de foco padrão do navegador */
             text-decoration: none; /* Remove o sublinhado padrão de links */
             transition: background-color 0.3s; /* Transição suave para mudança de cor */
+            transform: rotate(-90deg); /* Rotaciona o botão */
+            transform-origin: bottom right; /* Ajusta o ponto de rotação para o canto inferior direito */
         }
 
-        #unique-link:active {
+        #vertical-link:active {
             background-color: #55AD50; /* Cor verde original após o clique */
         }
 
-        #unique-link:focus {
+        #vertical-link:focus {
             background-color: #55AD50; /* Cor verde original após o foco */
         }
 
-        #unique-text {
+        #vertical-text {
             font-family: 'Nunito', sans-serif;
             font-optical-sizing: auto;
             font-weight: 700;
             font-style: normal;
-            font-size: 14px; /* Tamanho do texto ajustado para 16px */
+            font-size: 14px; /* Tamanho do texto ajustado para 14px */
             display: flex;
             align-items: center; /* Garante que o texto e a imagem fiquem alinhados verticalmente */
         }
 
-        #unique-image {
+        #vertical-image {
             width: 30px;
             height: 30px;
             margin-left: 8px;
             border-radius: 50%;
+            rotate: 90deg;
         }
     </style>
 </head>
 <body>
-    <a id="unique-link" href="https://github.com/YOU_USER" target="_blank" class="nunito-custom">
-        <span id="unique-text">Developed by</span>
-        <img id="unique-image" style="border-radius: 50%;" src="https://github.com/YOU_USER.png" alt="GitHub Avatar">
+    <a id="vertical-link" href="https://github.com/YOU_USER" target="_blank">
+        <span id="vertical-text">Developed by</span>
+        <img id="vertical-image" src="https://github.com/YOU_USER.png" alt="GitHub Avatar">
     </a>
 </body>
 </html>
