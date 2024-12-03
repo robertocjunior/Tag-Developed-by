@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap'); 
+        
+        #unique-link {
+            background-color: #55AD50; /* Cor padrão do botão */
+            border: none; 
+            height: 42px; 
+            width: 150px; /* A largura do botão foi ajustada */
+            display: flex; 
+            align-items: center; 
+            justify-content: center; /* Alinha os itens no centro horizontalmente */
+            cursor: pointer; 
+            border-radius: 18px 18px 0px 0px;
+            color: white;
+            padding: 0 10px; /* Adicionando algum espaço interno nas laterais */
+            outline: none; /* Remove a borda de foco padrão do navegador */
+            text-decoration: none; /* Remove o sublinhado padrão de links */
+            transition: background-color 0.3s; /* Transição suave para mudança de cor */
+        }
+
+        #unique-link:active {
+            background-color: #55AD50; /* Cor verde original após o clique */
+        }
+
+        #unique-link:focus {
+            background-color: #55AD50; /* Cor verde original após o foco */
+        }
+
+        #unique-text {
+            font-family: 'Nunito', sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 14px; /* Tamanho do texto ajustado para 16px */
+            display: flex;
+            align-items: center; /* Garante que o texto e a imagem fiquem alinhados verticalmente */
+        }
+
+        #unique-image {
+            width: 30px;
+            height: 30px;
+            margin-left: 8px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <a id="unique-link" href="https://github.com/YOU_USER" target="_blank" class="nunito-custom">
+        <span id="unique-text">Developed by</span>
+        <img id="unique-image" style="border-radius: 50%;" src="https://github.com/YOU_USER.png" alt="GitHub Avatar">
+    </a>
+</body>
+</html>
